@@ -24,6 +24,7 @@
   var POSITION = (scriptTag && scriptTag.getAttribute('data-position')) || 'right';
   var LANG_OVERRIDE = (scriptTag && scriptTag.getAttribute('data-lang')) || 'auto';
   var STATEMENT_URL = scriptTag ? scriptTag.getAttribute('data-statement-url') : null;
+  var WHITE_LABEL = (scriptTag && scriptTag.getAttribute('data-whitelabel')) === 'true';
 
   // Sub-account client parameters for Israeli IS 5568 Accessibility Statement
   var CLIENT_NAME = (scriptTag && scriptTag.getAttribute('data-client-name')) || '';
@@ -336,7 +337,11 @@
           '<span>·</span>' +
           '<button class="aw-link-btn" id="aw-open-report" type="button">' + I.flag + ' ' + (L.reportIssue || 'דיווח תקלה') + '</button>' +
         '</div>' +
-        '<div class="aw-ftr-compliance">' + (L.compliance || 'ת"י 5568 | AAA') + '</div>' +
+        '<div class="aw-ftr-brand">' +
+          (WHITE_LABEL
+            ? '<span class="aw-ftr-compliance">' + (L.compliance || 'ת"י 5568 | AAA') + '</span>'
+            : '<a href="https://beatwork.ai" target="_blank" rel="noopener" class="aw-brand-link" title="Beatwork AI">' + (L.poweredBy || 'מופעל ע"י Beatwork AI') + '</a>') +
+        '</div>' +
       '</div>';
 
     document.body.appendChild(panel);
