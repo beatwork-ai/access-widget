@@ -52,8 +52,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-#aw-toggle[data-pos="right"] { right: 24px; }
-#aw-toggle[data-pos="left"] { left: 24px; }
+#aw-toggle[data-pos="right"], #aw-toggle[data-pos="bottom-right"] { right: 24px; bottom: 24px; top: auto; left: auto; }
+#aw-toggle[data-pos="left"], #aw-toggle[data-pos="bottom-left"] { left: 24px; bottom: 24px; top: auto; right: auto; }
+#aw-toggle[data-pos="top-left"] { left: 24px; top: 24px; bottom: auto; right: auto; }
+#aw-toggle[data-pos="top-right"] { right: 24px; top: 24px; bottom: auto; left: auto; }
 #aw-toggle:hover {
   transform: scale(1.08);
   box-shadow: 0 10px 30px rgba(29, 78, 216, 0.55);
@@ -89,8 +91,10 @@
   transform: translateY(12px) scale(0.98);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
-#aw-panel[data-pos="right"] { right: 24px; }
-#aw-panel[data-pos="left"] { left: 24px; }
+#aw-panel[data-pos="right"], #aw-panel[data-pos="bottom-right"] { right: 24px; bottom: 96px; top: auto; left: auto; }
+#aw-panel[data-pos="left"], #aw-panel[data-pos="bottom-left"] { left: 24px; bottom: 96px; top: auto; right: auto; }
+#aw-panel[data-pos="top-left"] { left: 24px; top: 96px; bottom: auto; right: auto; }
+#aw-panel[data-pos="top-right"] { right: 24px; top: 96px; bottom: auto; left: auto; }
 #aw-panel[data-dir="rtl"] { direction: rtl; text-align: right; }
 #aw-panel[data-dir="ltr"] { direction: ltr; text-align: left; }
 #aw-panel.aw-open {
@@ -805,8 +809,8 @@ body.aw-tooltips [title]:hover::after {
   color: #0f172a;
   box-sizing: border-box;
 }
-#aw-struct[data-pos="right"] { right: 450px; }
-#aw-struct[data-pos="left"] { left: 450px; }
+#aw-struct[data-pos="right"], #aw-struct[data-pos="bottom-right"], #aw-struct[data-pos="top-right"] { right: 450px; }
+#aw-struct[data-pos="left"], #aw-struct[data-pos="bottom-left"], #aw-struct[data-pos="top-left"] { left: 450px; }
 #aw-struct[data-dir="rtl"] { direction: rtl; text-align: right; }
 #aw-struct[data-dir="ltr"] { direction: ltr; text-align: left; }
 #aw-struct.aw-vis { display: block; }
@@ -864,25 +868,27 @@ body.aw-tooltips [title]:hover::after {
 @media (max-width: 480px) {
   #aw-panel {
     width: calc(100vw - 24px);
-    bottom: 84px;
   }
-  #aw-panel[data-pos="right"] { right: 12px; }
-  #aw-panel[data-pos="left"] { left: 12px; }
+  #aw-panel[data-pos="right"], #aw-panel[data-pos="bottom-right"] { right: 12px; bottom: 84px; top: auto; left: auto; }
+  #aw-panel[data-pos="left"], #aw-panel[data-pos="bottom-left"] { left: 12px; bottom: 84px; top: auto; right: auto; }
+  #aw-panel[data-pos="top-left"] { left: 12px; top: 76px; bottom: auto; right: auto; }
+  #aw-panel[data-pos="top-right"] { right: 12px; top: 76px; bottom: auto; left: auto; }
   #aw-toggle {
-    bottom: 16px;
     width: 52px;
     height: 52px;
   }
-  #aw-toggle[data-pos="right"] { right: 16px; }
-  #aw-toggle[data-pos="left"] { left: 16px; }
+  #aw-toggle[data-pos="right"], #aw-toggle[data-pos="bottom-right"] { right: 16px; bottom: 16px; top: auto; left: auto; }
+  #aw-toggle[data-pos="left"], #aw-toggle[data-pos="bottom-left"] { left: 16px; bottom: 16px; top: auto; right: auto; }
+  #aw-toggle[data-pos="top-left"] { left: 16px; top: 16px; bottom: auto; right: auto; }
+  #aw-toggle[data-pos="top-right"] { right: 16px; top: 16px; bottom: auto; left: auto; }
   #aw-struct {
     width: calc(100vw - 24px);
     top: auto;
     bottom: 84px;
     transform: none;
   }
-  #aw-struct[data-pos="right"] { right: 12px; }
-  #aw-struct[data-pos="left"] { left: 12px; }
+  #aw-struct[data-pos="right"], #aw-struct[data-pos="bottom-right"], #aw-struct[data-pos="top-right"] { right: 12px; }
+  #aw-struct[data-pos="left"], #aw-struct[data-pos="bottom-left"], #aw-struct[data-pos="top-left"] { left: 12px; }
   .aw-profiles-grid { grid-template-columns: 1fr; }
   .aw-btn-grid { grid-template-columns: 1fr; }
   #aw-statement-modal {
