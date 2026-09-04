@@ -340,7 +340,7 @@
         '<div class="aw-ftr-brand">' +
           (WHITE_LABEL
             ? '<span class="aw-ftr-compliance">' + (L.compliance || 'ת"י 5568 | AAA') + '</span>'
-            : '<a href="https://beatwork.ai" target="_blank" rel="noopener" class="aw-brand-link" title="Beatwork AI">' + (L.poweredBy || 'מופעל ע"י Beatwork AI') + '</a>') +
+            : '<a href="https://beatwork.ai" target="_blank" rel="noopener" class="aw-brand-link" title="Beatwork AI">Powered by <strong>Beatwork AI</strong></a>') +
         '</div>' +
       '</div>';
 
