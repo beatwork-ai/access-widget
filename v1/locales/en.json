@@ -1,0 +1,129 @@
+{
+  "dir": "ltr",
+  "lang": "en-US",
+  "openMenu": "Open Accessibility Menu",
+  "menuTitle": "Accessibility Menu",
+  "closeMenu": "Close Accessibility Menu",
+  "searchPlaceholder": "Search features...",
+  "skipToContent": "Skip to main content",
+  "menuOpened": "Accessibility menu opened",
+  "menuClosed": "Accessibility menu closed",
+  "profilesTitle": "Accessibility Profiles",
+  "profiles": {
+    "seizure": "Seizure Safe",
+    "seizureDesc": "Eliminates flashes & reduces color saturation",
+    "vision": "Vision Impaired",
+    "visionDesc": "Enhances text size, contrast & readable font",
+    "adhd": "ADHD Friendly",
+    "adhdDesc": "Reading mask, reduces distractions & adds focus",
+    "keyboard": "Keyboard Nav",
+    "keyboardDesc": "Visible focus highlight & rapid key navigation",
+    "blind": "Screen Reader",
+    "blindDesc": "Optimized ARIA markup & page structure"
+  },
+  "sections": {
+    "profiles": "Recommended Profiles",
+    "display": "Display & Font",
+    "color": "Colors & Contrast",
+    "content": "Content & Reading",
+    "nav": "Navigation & Keyboard"
+  },
+  "sliders": {
+    "fontSize": "Text Size",
+    "fontSizeDec": "Decrease text size",
+    "fontSizeInc": "Increase text size",
+    "lineHeight": "Line Height",
+    "lineHeightDec": "Decrease line height",
+    "lineHeightInc": "Increase line height",
+    "letterSpacing": "Letter Spacing",
+    "letterSpacingDec": "Decrease letter spacing",
+    "letterSpacingInc": "Increase letter spacing",
+    "wordSpacing": "Word Spacing",
+    "wordSpacingDec": "Decrease word spacing",
+    "wordSpacingInc": "Increase word spacing",
+    "normal": "Normal"
+  },
+  "features": {
+    "contrast": "Color Contrast",
+    "saturation": "Color Saturation",
+    "invertColors": "Invert Colors",
+    "highlightLinks": "Highlight Links",
+    "highlightHeadings": "Highlight Headings",
+    "readableFont": "Readable Font",
+    "dyslexiaFont": "Dyslexia Font",
+    "textAlign": "Align Text",
+    "hideImages": "Hide Images",
+    "stopAnimations": "Stop Animations",
+    "keyboardNav": "Keyboard Navigation",
+    "focusHighlight": "Focus Highlight",
+    "ttsEnabled": "Text to Speech (Read Aloud)",
+    "bigCursor": "Big Cursor",
+    "readingGuide": "Reading Guide",
+    "readingMask": "Reading Mask",
+    "tooltips": "Show Tooltips",
+    "pageStructure": "Page Structure & Headings"
+  },
+  "contrastModes": [
+    "Default Contrast",
+    "High Contrast",
+    "Monochrome (B&W)",
+    "Black on White",
+    "Yellow on Black",
+    "Black on Yellow"
+  ],
+  "saturationModes": [
+    "Normal Saturation",
+    "Low Saturation",
+    "Grayscale",
+    "High Saturation"
+  ],
+  "alignModes": [
+    "Default Align",
+    "Center Align",
+    "Right Align",
+    "Left Align"
+  ],
+  "reset": "Reset All Settings",
+  "resetAnnounce": "All accessibility settings have been reset to defaults",
+  "compliance": "IS 5568 | WCAG 2.1 AAA | ADA",
+  "statementLink": "Accessibility Statement",
+  "reportIssue": "Report Barrier",
+  "on": "On",
+  "off": "Off",
+  "announce": {
+    "fontSize": "Text size",
+    "lineHeight": "Line height",
+    "letterSpacing": "Letter spacing",
+    "wordSpacing": "Word spacing"
+  },
+  "structure": {
+    "title": "Page Structure",
+    "headings": "Headings",
+    "landmarks": "Landmarks",
+    "noHeadings": "No headings found on this page"
+  },
+  "badge": {
+    "aaa": "AAA",
+    "standard": "IS 5568"
+  },
+  "statementModal": {
+    "title": "Accessibility Statement",
+    "close": "Close Accessibility Statement",
+    "intro": "We are dedicated to ensuring digital accessibility for people with disabilities and continually improving the user experience for everyone.",
+    "standardTitle": "Compliance Standards & Regulations",
+    "standardText": "This website strives to conform to the Equal Rights for Persons with Disabilities Law, Israeli Standard IS 5568 Level AA, and the Web Content Accessibility Guidelines (WCAG 2.1 AAA / ADA Title III).",
+    "featuresTitle": "Accessibility Features Implemented",
+    "featuresText": "The website incorporates an accessibility toolset supporting keyboard navigation, visible focus indicators, font and spacing scaling, advanced contrast filters, screen-reader landmarks, and motion reduction.",
+    "physicalTitle": "Physical Facility Accessibility",
+    "physicalDefault": "Our physical premises provide accessible entrances, elevator access, wheelchair ramps, and nearby accessible parking.",
+    "coordinatorTitle": "Accessibility Coordinator Contact",
+    "coordinatorDesc": "For any inquiries, requests, or accessibility accommodations, please contact our Accessibility Coordinator:",
+    "coordinatorName": "Name:",
+    "coordinatorPhone": "Phone:",
+    "coordinatorEmail": "Email:",
+    "reportTitle": "Encountered an Accessibility Issue?",
+    "reportDesc": "Despite our best efforts to make all content accessible, you may encounter temporary limitations. Please report any issues directly to our accessibility officer.",
+    "reportBtn": "Report Accessibility Issue",
+    "lastUpdated": "Last Updated:"
+  }
+}
