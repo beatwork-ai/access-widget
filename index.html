@@ -125,6 +125,8 @@
           <select id="cfg-pos" class="w-full px-4 py-2.5 rounded-xl input-field focus:outline-none text-sm">
             <option value="right" selected>ימין למטה (Right — מומלץ לאתרים בעברית)</option>
             <option value="left">שמאל למטה (Left)</option>
+            <option value="top-left">שמאל למעלה (Top-Left)</option>
+            <option value="top-right">ימין למעלה (Top-Right)</option>
           </select>
         </div>
 
@@ -263,6 +265,14 @@
       snippet += `\n  defer>\n<\/script>`;
 
       document.getElementById('code-output').textContent = snippet;
+
+      // Real-time position preview for testing widget on page
+      const toggle = document.getElementById('aw-toggle');
+      const panel = document.getElementById('aw-panel');
+      const struct = document.getElementById('aw-struct');
+      if (toggle) toggle.setAttribute('data-pos', pos);
+      if (panel) panel.setAttribute('data-pos', pos);
+      if (struct) struct.setAttribute('data-pos', pos);
     }
 
     document.querySelectorAll('#cfg-client, #cfg-cdn, #cfg-coord-name, #cfg-coord-phone, #cfg-coord-email, #cfg-pos, #cfg-whitelabel, #cfg-date, #cfg-physical').forEach(input => {
