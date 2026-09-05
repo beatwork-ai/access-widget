@@ -85,6 +85,7 @@
   ],
   "reset": "Reset All Settings",
   "resetAnnounce": "All accessibility settings have been reset to defaults",
+  "resetSuccess": "Settings successfully reset",
   "compliance": "IS 5568 | AAA",
   "poweredBy": "Powered by Beatwork AI",
   "statementLink": "Accessibility Statement",

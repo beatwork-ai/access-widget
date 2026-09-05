@@ -107,7 +107,8 @@
     rst: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>',
     cls: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>',
     doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
-    flag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>'
+    flag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>',
+    chk: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
   };
 
   function loadLocale(callback) {
@@ -138,7 +139,7 @@
             compliance: 'IS 5568 | WCAG 2.1 AAA',
             statementLink: LANG === 'he' ? 'הצהרת נגישות' : 'Accessibility Statement',
             reportIssue: LANG === 'he' ? 'דיווח על תקלה' : 'Report Barrier',
-            reset: LANG === 'he' ? 'איפוס הגדרות' : 'Reset'
+            reset: LANG === 'he' ? 'איפוס כל ההגדרות' : 'Reset'
           });
         });
     } catch (e) {
@@ -327,7 +328,7 @@
         '</div>' +
       '</div>' +
 
-      '<button class="aw-rst" id="aw-rst" type="button">' + I.rst + ' ' + (L.reset || 'איפוס הגדרות') + '</button>' +
+      '<button class="aw-rst" id="aw-rst" type="button">' + I.rst + ' ' + (L.reset || 'איפוס כל ההגדרות') + '</button>' +
       '</div>' +
 
       // Panel Footer
@@ -818,7 +819,8 @@
     });
 
     // ─── 15. Reset Button ───
-    document.getElementById('aw-rst').addEventListener('click', function () {
+    var rstBtn = document.getElementById('aw-rst');
+    rstBtn.addEventListener('click', function () {
       prefs = Object.assign({}, defaults);
       document.documentElement.style.fontSize = '';
       document.body.style.lineHeight = '';
@@ -827,6 +829,14 @@
       try { window.speechSynthesis.cancel(); } catch (e) {}
       applyAll();
       announce(L.resetAnnounce || 'Reset');
+
+      // Visual feedback
+      rstBtn.classList.add('aw-rst--success');
+      rstBtn.innerHTML = I.chk + ' ' + (L.resetSuccess || (LANG === 'he' ? 'ההגדרות אופסו בהצלחה' : (LANG === 'ru' ? 'Настройки сброшены' : 'Settings reset')));
+      setTimeout(function () {
+        rstBtn.classList.remove('aw-rst--success');
+        rstBtn.innerHTML = I.rst + ' ' + (L.reset || 'איפוס כל ההגדרות');
+      }, 1600);
     });
 
     // ─── 16. Keyboard Focus Trap ───

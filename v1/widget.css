@@ -437,28 +437,39 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1.5px solid #fecaca;
+  padding: 10px 16px;
+  margin-top: 14px;
+  border: 1px solid #cbd5e1;
   border-radius: 10px;
-  background: #fef2f2;
-  color: #dc2626;
+  background: #f8fafc;
+  color: #475569;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: inherit;
   min-height: 42px;
 }
 .aw-rst:hover {
-  background: #fee2e2;
-  border-color: #f87171;
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+.aw-rst:active {
+  transform: scale(0.99);
 }
 .aw-rst:focus-visible {
-  outline: 3px solid #dc2626;
-  outline-offset: 1px;
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
 }
-.aw-rst svg { width: 16px; height: 16px; }
+.aw-rst.aw-rst--success {
+  background: #ecfdf5 !important;
+  border-color: #6ee7b7 !important;
+  color: #047857 !important;
+  font-weight: 700 !important;
+}
+.aw-rst svg { width: 16px; height: 16px; flex-shrink: 0; }
 
 /* ─── Footer ─── */
 .aw-ftr {
